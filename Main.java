@@ -42,6 +42,12 @@ public class Main {
 
         int minMark = minCal(marks);
         System.out.println("Minimum Mark = " + minMark);
+
+        int[] sortedMarks = sortMarks(marks);
+        System.out.println("Sorted Marks ");
+        for (int mark : sortedMarks){
+            System.out.println(mark);
+        }
     }
 
         public static double averageCal(int[] marks){
@@ -71,5 +77,18 @@ public class Main {
             }
         }
         return min;
+    }
+
+    public static int[] sortMarks(int[] marks){
+        for(int i=0;i<marks.length;i++){
+            for(int j = i+1; j<marks.length;j++){
+                if (marks[i]>marks[j]){
+                    int temp = marks[i];
+                    marks[i]=marks[j];
+                    marks[j]=temp;
+                }
+            }
+        }
+        return marks;
     }
 }
