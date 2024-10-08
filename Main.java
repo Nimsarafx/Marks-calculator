@@ -78,7 +78,7 @@ public class Main {
     public static int minCal(int[] marks){
         int min = marks[0];
         for(int mark:marks){
-            if(mark > min){
+            if(mark < min){
                 min = mark;
             }
         }
