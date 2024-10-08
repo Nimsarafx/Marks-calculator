@@ -4,10 +4,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter 6 marks:");
+        System.out.println("Enter 6 marks within the range of 0 to 100:");
         int[] marks = new int[6];
         for (int i = 0; i < 6; i++) {
-            marks[i] = scanner.nextInt();
+            do{
+                System.out.print("Enter mark " + (i+1) + " : ");
+                marks[i]= scanner.nextInt();
+                if(marks[i]<0||marks[i]>100){
+                    System.out.println("Invalid Input, please enter a mark within the range ");
+                }
+            }while (marks[i]<0||marks[i]>100);
         }
         System.out.println("Marks:");
         for (int mark : marks) {
@@ -72,7 +78,7 @@ public class Main {
     public static int minCal(int[] marks){
         int min = marks[0];
         for(int mark:marks){
-            if(mark > min){
+            if(mark < min){
                 min = mark;
             }
         }
