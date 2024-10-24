@@ -34,11 +34,12 @@ public class Main {
                 first++;
             }
         }
-        System.out.println("Pass :" + pass);
-        System.out.println("Fail :" + fail);
+        System.out.println("Pass mark :" + pass);
+        System.out.println("Fail mark:" + fail);
         System.out.println("2:2 :" + twoTwo);
         System.out.println("2:1 :" + twoOne);
         System.out.println("Above 70 :" + first);
+        System.out.println("Hari");
 
         double average = averageCal(marks);
         System.out.println("Average = " + average);
