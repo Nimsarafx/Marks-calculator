@@ -40,6 +40,7 @@ public class Main {
         System.out.println("2:1 :" + twoOne);
         System.out.println("Above 70 :" + first);
         System.out.println("Hari");
+        System.out.println("Goda");
 
         double average = averageCal(marks);
         System.out.println("Average = " + average);
